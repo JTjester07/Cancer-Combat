@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TakeDamage : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class TakeDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Health -= 50;
+            Health -= 25;
             Destroy(collision.gameObject);
 
             // Perform other actions or reactions to the collision here
@@ -16,6 +17,7 @@ public class TakeDamage : MonoBehaviour
             if (Health <= 0)
             {
                 // Player defeated, handle the game over logic
+                SceneManager.LoadScene(3);
             }
         }
     }

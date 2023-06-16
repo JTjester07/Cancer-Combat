@@ -9,4 +9,12 @@ public class ChangeScene : MonoBehaviour
 	{
         SceneManager.LoadScene(1);
 	}
+    public void StartGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

@@ -7,6 +7,8 @@ TagManager:
   - bullet
   - Tumor
   - Enemy
+  - tracker
+  - UpgradeCanvas
   layers:
   - Default
   - TransparentFX

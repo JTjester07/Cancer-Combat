@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TumorTracker : MonoBehaviour
@@ -14,12 +15,12 @@ public class TumorTracker : MonoBehaviour
 
         if (objectCount >= 50)
 		{
-            // Causes a loss
-		}
+            SceneManager.LoadScene(3);
+        }
         else if (objectCount <= 0)
 		{
-            // Causes a win
-		}
+            SceneManager.LoadScene(4);
+        }
     }
 
     void CountObjectsWithTag()

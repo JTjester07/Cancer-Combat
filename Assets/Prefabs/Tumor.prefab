@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 7103547511987950388}
   spawnAreaSize: {x: 20, y: 20}
-  spawnInterval: 120
+  spawnInterval: 60
 --- !u!58 &-4743317827328794837
 CircleCollider2D:
   m_ObjectHideFlags: 0

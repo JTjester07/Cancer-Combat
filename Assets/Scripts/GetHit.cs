@@ -5,6 +5,13 @@ public class GetHit : MonoBehaviour
     public GameObject prefabToSpawn;
     public Vector2 spawnAreaSize = new Vector2(5f, 5f);
     private int health = 30;
+    private GameObject upgradeCanvas;
+
+    void Start()
+    {
+        upgradeCanvas = GameObject.FindWithTag("UpgradeCanvas");
+        // Use the upgradeCanvas variable as needed
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -13,10 +20,21 @@ public class GetHit : MonoBehaviour
             health -= 1;
 
             if (health <= 0)
+            {
                 Destroy(gameObject);
+
+                // Starts the player upgrade process
+
+                upgradeCanvas.SetActive(true);
+                Time.timeScale = 0f;
+            }
 
             Destroy(collision.gameObject);
             SpawnPrefab();
+        }
+        else if (collision.gameObject.tag == "tracker")
+        {
+            Destroy(collision.gameObject);
         }
     }
 
