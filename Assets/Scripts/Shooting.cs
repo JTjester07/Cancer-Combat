@@ -5,6 +5,7 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
     public float bulletSpeed = 10f;
+    public float spawnOffset = 0.5f;
 
     void Update()
     {
@@ -16,7 +17,8 @@ public class Shooting : MonoBehaviour
 
     void FireBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Vector3 spawnPosition = bulletSpawnPoint.position + (bulletSpawnPoint.up * spawnOffset);
+        GameObject bullet = Instantiate(bulletPrefab, spawnPosition, bulletSpawnPoint.rotation);
         Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
         bulletRigidbody.velocity = bulletSpawnPoint.up * bulletSpeed;
     }
