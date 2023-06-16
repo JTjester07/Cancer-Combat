@@ -2,18 +2,23 @@ using UnityEngine;
 
 public class enemyChase : MonoBehaviour
 {
-    public Transform player;
     public float moveSpeed = 5f;
 
     void Update()
     {
-        // Calculate the direction from enemy to player
-        Vector3 direction = player.position - transform.position;
+        // Find the player object using the unique tag "Player"
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
-        // Normalize the direction vector to get a unit direction
-        direction.Normalize();
+        if (playerObject != null)
+        {
+            // Calculate the direction from enemy to player
+            Vector3 direction = playerObject.transform.position - transform.position;
 
-        // Move the enemy towards the player
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+            // Normalize the direction vector to get a unit direction
+            direction.Normalize();
+
+            // Move the enemy towards the player
+            transform.Translate(direction * moveSpeed * Time.deltaTime);
+        }
     }
 }
