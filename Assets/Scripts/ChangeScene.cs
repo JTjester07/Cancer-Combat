@@ -22,4 +22,12 @@ public class ChangeScene : MonoBehaviour
         TumorTracker.tumorsKilled = 0;
         TimeTracker.currentTime = 0;
     }
+    public void About()
+    {
+        SceneManager.LoadScene(6);
+    }
+    public void Settings()
+    {
+        SceneManager.LoadScene(7);
+    }
 }
