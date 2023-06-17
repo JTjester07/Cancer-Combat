@@ -8,7 +8,7 @@ public class EnemyHit : MonoBehaviour
     {
         if (collision.gameObject.tag == "bullet")
         {
-            health -= 1;
+            health -= Shooting.damageUpgrade;
 
             if (health <= 0)
                 Destroy(gameObject);

@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72df388134ed24b649572e9f0cf20d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!212 &37425292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -291,7 +290,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4cf6af3d8d44605b3baa2bad934c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+--- !u!1001 &230991359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 515164693454152550, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: spawnInterval
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 515164693454152550, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950344, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: UpgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950344, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.599998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 29.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950388, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_Name
+      value: Tumor (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
 --- !u!1 &245563263
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,8 +400,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000033379, y: 0.000015259}
-  m_SizeDelta: {x: 445.8061, y: 96.4197}
+  m_AnchoredPosition: {x: -0.000020981, y: -340}
+  m_SizeDelta: {x: 510.2131, y: 97.4481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245563265
 MonoBehaviour:
@@ -375,7 +446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 245563266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1279029800}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: UpgradeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &245563266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,8 +602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014305, y: 140}
-  m_SizeDelta: {x: 445.8061, y: 96.4197}
+  m_AnchoredPosition: {x: 528, y: -340}
+  m_SizeDelta: {x: 510.2131, y: 97.4481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &472722633
 MonoBehaviour:
@@ -565,7 +648,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 472722634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1279029800}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: UpgradeHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &472722634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,6 +1024,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642105483}
   m_CullTransparentMesh: 1
+--- !u!1001 &656500361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 515164693454152550, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950344, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103547511987950388, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: m_Name
+      value: Tumor (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
 --- !u!1 &661297186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,7 +1303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -647, y: -323.6}
+  m_AnchoredPosition: {x: -681, y: 322}
   m_SizeDelta: {x: 172.9047, y: 33.747}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731965632
@@ -1364,8 +1524,16 @@ PrefabInstance:
       propertyPath: spawnInterval
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 515164693454152550, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
     - target: {fileID: 7103547511987950344, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: UpgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950344, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
       value: 
       objectReference: {fileID: 1279029795}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
@@ -1374,11 +1542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.43
+      value: -39.9
       objectReference: {fileID: 0}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.35
+      value: 29.9
       objectReference: {fileID: 0}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1572,7 +1740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1279029796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,7 +1874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -575.95, y: -289.85}
+  m_AnchoredPosition: {x: -609.95, y: 355.75003}
   m_SizeDelta: {x: 315.0135, y: 33.75}
   m_Pivot: {x: 0.5, y: 0.5000004}
 --- !u!114 &1393529697
@@ -1826,17 +1994,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 515164693454152550, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
+    - target: {fileID: 7103547511987950344, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
+      propertyPath: upgradeCanvas
+      value: 
+      objectReference: {fileID: 1279029795}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.419111
+      value: -40.1
       objectReference: {fileID: 0}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.685238
+      value: -20.1
       objectReference: {fileID: 0}
     - target: {fileID: 7103547511987950345, guid: 9cd510c43b7d54ea1abe89f202cbd5a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2048,8 +2224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000033379, y: -141}
-  m_SizeDelta: {x: 445.8061, y: 96.4197}
+  m_AnchoredPosition: {x: -528, y: -340}
+  m_SizeDelta: {x: 510.2131, y: 97.4481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075313369
 MonoBehaviour:
@@ -2094,7 +2270,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075313370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1279029800}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: UpgradeSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2075313370
 MonoBehaviour:
   m_ObjectHideFlags: 0

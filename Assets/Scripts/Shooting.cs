@@ -7,15 +7,16 @@ public class Shooting : MonoBehaviour
     public Transform bulletSpawnPoint;
     public float bulletSpeed = 10f;
     public float spawnOffset = 0.5f;
+    public static int damageUpgrade = 1;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.timeScale != 0)
         {
             FireBullet();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && Time.timeScale != 0)
         {
             FireTracker();
         }

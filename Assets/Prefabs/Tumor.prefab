@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 8401533153427273169, guid: 62ecc5912e68841d7b3926bf2968d679, type: 3}
   spawnAreaSize: {x: 5, y: 5}
+  upgradeCanvas: {fileID: 0}
 --- !u!114 &515164693454152550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 7103547511987950388}
   spawnAreaSize: {x: 20, y: 20}
-  spawnInterval: 60
+  spawnInterval: 15
+  upgradeCanvas: {fileID: 0}
 --- !u!58 &-4743317827328794837
 CircleCollider2D:
   m_ObjectHideFlags: 0

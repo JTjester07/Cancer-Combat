@@ -5,6 +5,7 @@ public class spawnTumor : MonoBehaviour
     public GameObject prefabToSpawn;
     public Vector2 spawnAreaSize = new Vector2(5f, 5f);
     public float spawnInterval = 120f; // 2 minutes
+    public GameObject upgradeCanvas;
 
     private float timer;
 
@@ -27,7 +28,11 @@ public class spawnTumor : MonoBehaviour
     void SpawnPrefab()
     {
         Vector2 spawnPosition = GetRandomSpawnPosition();
-        Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+        GameObject prefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+        GetHit prefabScript = prefab.GetComponent<GetHit>();
+        spawnTumor prefabScriptTwo = prefab.GetComponent<spawnTumor>();
+        prefabScript.upgradeCanvas = upgradeCanvas;
+        prefabScriptTwo.upgradeCanvas = upgradeCanvas;
     }
 
     Vector2 GetRandomSpawnPosition()

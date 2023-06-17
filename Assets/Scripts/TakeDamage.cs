@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class TakeDamage : MonoBehaviour
 {
-    public int Health = 100;
+    public static int Health = 100;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,7 +17,7 @@ public class TakeDamage : MonoBehaviour
             if (Health <= 0)
             {
                 // Player defeated, handle the game over logic
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(5);
             }
         }
     }

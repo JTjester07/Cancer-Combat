@@ -5,7 +5,6 @@ public class Movement : MonoBehaviour
     public static float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private Animation animation;
 
     void Start()
     {

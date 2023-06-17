@@ -4,7 +4,9 @@ using TMPro;
 
 public class TumorTracker : MonoBehaviour
 {
-    private int objectCount;
+    public static int objectCount;
+    public static int tumorsKilled = 0;
+    public static int totalTumorsKilled = 0;
     public TextMeshProUGUI tumorText;
 
     void Update()

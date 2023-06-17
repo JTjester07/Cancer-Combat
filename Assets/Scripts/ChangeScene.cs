@@ -15,6 +15,10 @@ public class ChangeScene : MonoBehaviour
     }
     public void MainMenu()
     {
+        Shooting.damageUpgrade = 1;
+        TakeDamage.Health = 100;
+        Movement.moveSpeed = 5;
+        TimeTracker.gameTime = 0;
         SceneManager.LoadScene(0);
     }
 }
