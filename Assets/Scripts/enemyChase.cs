@@ -4,7 +4,7 @@ public class enemyChase : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
-    void Update()
+    void FixedUpdate()
     {
         // Find the player object using the unique tag "Player"
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
