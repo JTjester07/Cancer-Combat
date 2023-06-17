@@ -4,7 +4,7 @@ public class SpawnTumors : MonoBehaviour
 {
     public GameObject prefabToSpawn;
     public Vector2 spawnAreaSize = new Vector2(5f, 5f);
-    public int numberOfPrefabs = 5;
+    public static int numberOfPrefabs = 5;
     public GameObject upgradeCanvas;
 
     void Start()

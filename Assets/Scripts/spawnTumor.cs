@@ -4,14 +4,15 @@ public class spawnTumor : MonoBehaviour
 {
     public GameObject prefabToSpawn;
     public Vector2 spawnAreaSize = new Vector2(5f, 5f);
-    public float spawnInterval = 120f; // 2 minutes
+    public float spawnInterval = 120; // 2 minutes
+    public static int difficulty = 0;
     public GameObject upgradeCanvas;
 
     private float timer;
 
     void Start()
     {
-        timer = spawnInterval;
+        timer = spawnInterval + difficulty;
     }
 
     void Update()
@@ -21,7 +22,7 @@ public class spawnTumor : MonoBehaviour
         if (timer <= 0f)
         {
             SpawnPrefab();
-            timer = spawnInterval;
+            timer = spawnInterval + difficulty;
         }
     }
 
