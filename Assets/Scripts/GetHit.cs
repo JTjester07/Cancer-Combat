@@ -23,7 +23,7 @@ public class GetHit : MonoBehaviour
                 if (TumorTracker.objectCount > 1)
                 {
                     upgradeCanvas.SetActive(true);
-                    Time.timeScale = 0.1f;
+                    Time.timeScale = 0.02f;
                 }
             }
 

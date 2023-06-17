@@ -18,7 +18,8 @@ public class ChangeScene : MonoBehaviour
         Shooting.damageUpgrade = 1;
         TakeDamage.Health = 100;
         Movement.moveSpeed = 5;
-        TimeTracker.gameTime = 0;
         SceneManager.LoadScene(0);
+        TumorTracker.tumorsKilled = 0;
+        TimeTracker.currentTime = 0;
     }
 }

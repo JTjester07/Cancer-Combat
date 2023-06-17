@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96771d7de8194b9e84352497448bed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selfDestructDelay: 5
+  selfDestructDelay: 2
 --- !u!61 &781909970511560552
 BoxCollider2D:
   m_ObjectHideFlags: 0

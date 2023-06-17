@@ -22,7 +22,7 @@ public class Upgrade : MonoBehaviour
     {
         if (Movement.moveSpeed < 50)
         {
-            Movement.moveSpeed += 5;
+            Movement.moveSpeed += 2;
             gameObject.SetActive(false);
             Time.timeScale = 1f;
         }

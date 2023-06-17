@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SelfDestruct : MonoBehaviour
 {
-    public float selfDestructDelay = 5f;
+    public float selfDestructDelay = 2f;
 
     void Start()
     {

@@ -9,6 +9,7 @@ public class TimeTextUpdate : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        timeText.text = "Cancer Lifespan: " + TimeTracker.gameTime.ToString();
+        float roundedTime = Mathf.Round(TimeTracker.currentTime * 100f) / 100f;
+        timeText.text = "Cancer Lifespan: " + roundedTime.ToString() + " Seconds";
     }
 }
