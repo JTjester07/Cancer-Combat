@@ -15,7 +15,7 @@ public class TumorTracker : MonoBehaviour
 
         tumorText.text = "Tumors Remaining: " + objectCount.ToString();
 
-        if (objectCount >= 100)
+        if (objectCount >= 50)
 		{
             SceneManager.LoadScene(3);
         }

@@ -10,6 +10,8 @@ public class GetHit : MonoBehaviour
     private bool isDestroyed = false; // Flag to prevent further interaction
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
+    private ParticleSystem explosionParticleSystem; // Reference to the ParticleSystem component
+
     private void Start()
     {
         // Get the AudioSource component from the parent GameObject
@@ -17,6 +19,9 @@ public class GetHit : MonoBehaviour
 
         // Get the SpriteRenderer component
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Get the ParticleSystem component from the parent GameObject
+        explosionParticleSystem = GetComponentInParent<ParticleSystem>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +43,10 @@ public class GetHit : MonoBehaviour
                     DestroyWithDelay(gameObject, soundEffect.length);
                     TumorTracker.tumorsKilled += 1;
                     TumorTracker.totalTumorsKilled += 1;
+
+                    // Activate the explosion particle system
+                    if (explosionParticleSystem != null)
+                        explosionParticleSystem.Play();
 
                     // Starts the player upgrade process
                     if (TumorTracker.objectCount > 1)
@@ -90,5 +99,5 @@ public class GetHit : MonoBehaviour
 
         Destroy(obj, delay);
     }
-
 }
+
