@@ -79,11 +79,15 @@ public class Shooting : MonoBehaviour
 
         foreach (GameObject tumor in tumors)
         {
-            float distance = Vector3.Distance(transform.position, tumor.transform.position);
-            if (distance < shortestDistance)
+            SpriteRenderer spriteRenderer = tumor.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null && spriteRenderer.enabled)
             {
-                shortestDistance = distance;
-                nearestTumor = tumor;
+                float distance = Vector3.Distance(transform.position, tumor.transform.position);
+                if (distance < shortestDistance)
+                {
+                    shortestDistance = distance;
+                    nearestTumor = tumor;
+                }
             }
         }
 

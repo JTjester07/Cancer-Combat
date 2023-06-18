@@ -16,11 +16,11 @@ public class TumorTracker : MonoBehaviour
         tumorText.text = "Tumors Remaining: " + objectCount.ToString();
 
         if (objectCount >= 50)
-		{
+        {
             SceneManager.LoadScene(3);
         }
         else if (objectCount <= 0)
-		{
+        {
             SceneManager.LoadScene(4);
         }
     }
@@ -28,6 +28,15 @@ public class TumorTracker : MonoBehaviour
     void CountObjectsWithTag()
     {
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Tumor");
-        objectCount = objectsWithTag.Length;
+        objectCount = 0; // Reset the object count
+
+        foreach (GameObject obj in objectsWithTag)
+        {
+            SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null && spriteRenderer.enabled)
+            {
+                objectCount++;
+            }
+        }
     }
 }

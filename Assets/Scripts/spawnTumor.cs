@@ -28,6 +28,9 @@ public class spawnTumor : MonoBehaviour
 
     void SpawnPrefab()
     {
+        if (!GetComponent<SpriteRenderer>().enabled)
+            return; // If the parent object's SpriteRenderer is not enabled, do not spawn the prefab
+
         Vector2 spawnPosition = GetRandomSpawnPosition();
         GameObject prefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
         GetHit prefabScript = prefab.GetComponent<GetHit>();

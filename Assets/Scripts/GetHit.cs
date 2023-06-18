@@ -11,6 +11,7 @@ public class GetHit : MonoBehaviour
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
     private ParticleSystem explosionParticleSystem; // Reference to the ParticleSystem component
+    private Coroutine destroyCoroutine; // Reference to the destroy coroutine
 
     private void Start()
     {
@@ -40,7 +41,8 @@ public class GetHit : MonoBehaviour
                 if (health <= 0)
                 {
                     isDestroyed = true; // Set the flag to prevent further interaction
-                    DestroyWithDelay(gameObject, soundEffect.length);
+                    if (destroyCoroutine == null)
+                        destroyCoroutine = StartCoroutine(DestroyWithDelay(gameObject, soundEffect.length));
                     TumorTracker.tumorsKilled += 1;
                     TumorTracker.totalTumorsKilled += 1;
 
@@ -82,7 +84,7 @@ public class GetHit : MonoBehaviour
         return new Vector2(randomX, randomY);
     }
 
-    void DestroyWithDelay(GameObject obj, float delay)
+    private System.Collections.IEnumerator DestroyWithDelay(GameObject obj, float delay)
     {
         // Disable the SpriteRenderer component
         spriteRenderer.enabled = false;
@@ -97,7 +99,12 @@ public class GetHit : MonoBehaviour
         if (collider != null)
             collider.enabled = false;
 
-        Destroy(obj, delay);
+        yield return new WaitForSeconds(delay);
+
+        // Ensure the object is destroyed even if there was a delay
+        Destroy(obj);
+
+        // Reset the destroyCoroutine reference
+        destroyCoroutine = null;
     }
 }
-
