@@ -8,6 +8,20 @@ public class Shooting : MonoBehaviour
     public float bulletSpeed = 10f;
     public float spawnOffset = 0.5f;
     public static int damageUpgrade = 1;
+    public AudioClip soundEffect; // The sound effect clip to play
+    private AudioSource audioSource; // Reference to the AudioSource component
+
+    private void Start()
+    {
+        // Get the AudioSource component attached to the same GameObject
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void PlaySoundEffect()
+    {
+        // Play the sound effect
+        audioSource.PlayOneShot(soundEffect);
+    }
 
     void Update()
     {
@@ -24,6 +38,7 @@ public class Shooting : MonoBehaviour
 
     void FireBullet()
     {
+        PlaySoundEffect();
         Vector3 spawnPosition = bulletSpawnPoint.position + (bulletSpawnPoint.up * spawnOffset);
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, bulletSpawnPoint.rotation);
         Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
@@ -32,6 +47,7 @@ public class Shooting : MonoBehaviour
 
     void FireTracker()
     {
+        PlaySoundEffect();
         Vector3 spawnPosition = bulletSpawnPoint.position + (bulletSpawnPoint.up * spawnOffset);
         GameObject bullet = Instantiate(trackerPrefab, spawnPosition, bulletSpawnPoint.rotation);
 
