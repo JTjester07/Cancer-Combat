@@ -1,12 +1,12 @@
 # Cancer-Combat
 
 Cancer Combat is a top-down 2D shooter made in two days for
-Lame Jame 29. You play as a cell fighting off
+Lame Jame 29 on Itch.io. You play as a cell fighting off
 cancerous tumors that spread and duplicate,
 threatening your life.
 
 Cancer Combat was made in Unity and placed directly into GitHub,
-and is avaliable on my Itch.io page in the "about" section of
+and is available on my Itch.io page in the "about" section of
 this repository.
 
 Cancer Combat was my second game made and my first game jam,
@@ -19,7 +19,7 @@ Such design choices were only possible with constructive
 criticism from friends I let playtest the game.
 
 In addition, players can choose different upgrades balanced in
-a way that makes them all equally helpful, so players can expieriment
+a way that makes them all equally helpful, so players can experiment
 with different combinations of upgrades to destroy the tumors the fastest.
 This results in a satisfying gameplay loop of avoiding enemies
 and being quick to get high scores and upgrades!
