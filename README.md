@@ -6,7 +6,8 @@ cancerous tumors that spread and duplicate,
 threatening your life.
 
 Cancer Combat was made in Unity and placed directly into GitHub,
-and is avaliable on my Itch.io page.
+and is avaliable on my Itch.io page in the "about" section of
+this repository.
 
 Cancer Combat was my second game made and my first game jam,
 and a large dive into several Unity concepts. With the help
